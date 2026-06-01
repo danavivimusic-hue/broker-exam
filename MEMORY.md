@@ -11,5 +11,6 @@ this file + the linked notes first, and keep new notes here too.
 
 ## One-line state
 **Live** at https://danavivimusic-hue.github.io/broker-exam/ (repo `danavivimusic-hue/broker-exam`).
-Self-contained `index.html`, now **multi-test** via a top picker: מבחן 1 · בסיסי + מבחן 2 · מתקדם
-(harder set added 2026-06-01). Each = 25 Qs, HE↔RU 🌐 toggle, 90-min timer, pass = 15/25. More sets can follow.
+Self-contained `index.html`, now **multi-test** via a top picker: מבחן 1 · בסיסי + מבחן 2 · מתקדם +
+מבחן 3 · מתקדם (tests 2 & 3 added 2026-06-01; set 3 = same difficulty as set 2, all-new topics, no overlap).
+Each = 25 Qs, HE↔RU 🌐 toggle, 90-min timer, pass = 15/25. More sets can follow.

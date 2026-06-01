@@ -13,7 +13,13 @@ format (25 Qs · 90 min · pass = 60 = 15/25) and the HE↔RU toggle.
 - **מבחן 2 · מתקדם (Advanced)** — 25 harder questions (added 2026-06-01): scenario-based, exact-rule
   traps, and less-common topics (תקנת השוק ס'10, עסקאות נוגדות ס'9, חישוב ליניארי מוטב, היטל השבחה,
   הפקעה, דייר ממשיך, מימוש משכנתא). Correct answers spread evenly A–D (6/6/7/6) so position-guessing fails.
-More sets / a rotating bank can follow.
+- **מבחן 3 · מתקדם (Advanced, set 2)** — 25 more questions at the same difficulty as set 2 but
+  **no topic overlap** with tests 1–2 (added 2026-06-01): privity of the brokerage order, lapsed-then-renewed
+  license, residential-only scope of exclusivity caps, circumvention-via-relative, שכירות לדורות, זיקת הנאה,
+  פירוק שיתוף, מקרקעי ישראל/חכירה, המפקח על רישום, חוזה למראית עין, תום-לב במו"מ, דיווח תוך 30 יום,
+  מס רכישה 6% לא-מגורים, מתנה לקרוב, חזקת התא המשפחתי, צו ירושה, טופס 4, שימוש חורג, שמאי מכריע, רישיון עסק.
+  Also balanced A–D (6/6/7/6).
+More sets / a rotating bank can follow. When adding, check stems against existing sets to avoid repeats.
 
 ## Where it lives
 - **Folder:** `~/Desktop/broker-exam/` (its own git repo; intentionally on Desktop, not in `~/projects/`).
