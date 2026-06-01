@@ -10,6 +10,6 @@ this file + the linked notes first, and keep new notes here too.
 - [Project Notes](NOTES.md) — what it is, where it lives, live URL, deploy workflow, the bilingual-quiz build pattern, verified exam facts, and how to add the next test set.
 
 ## One-line state
-First of many practice tests is **live** at https://danavivimusic-hue.github.io/broker-exam/
-(repo `danavivimusic-hue/broker-exam`). Self-contained `index.html`: 25 American-style Qs,
-HE↔RU 🌐 toggle top-right, 90-min timer, pass = 15/25. More test sets to come.
+**Live** at https://danavivimusic-hue.github.io/broker-exam/ (repo `danavivimusic-hue/broker-exam`).
+Self-contained `index.html`, now **multi-test** via a top picker: מבחן 1 · בסיסי + מבחן 2 · מתקדם
+(harder set added 2026-06-01). Each = 25 Qs, HE↔RU 🌐 toggle, 90-min timer, pass = 15/25. More sets can follow.

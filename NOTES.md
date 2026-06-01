@@ -7,7 +7,13 @@
 ## What this is
 Interactive practice tests for the **Israeli real-estate broker licensing exam**
 (בחינת רישוי מתווכים במקרקעין — רשם המתווכים, משרד המשפטים).
-**This is the first of many tests** — more test sets / a rotating question bank to follow.
+**Multi-test now live:** a top-of-page picker switches between sets. Each set keeps the official
+format (25 Qs · 90 min · pass = 60 = 15/25) and the HE↔RU toggle.
+- **מבחן 1 · בסיסי (Basic)** — the original 25.
+- **מבחן 2 · מתקדם (Advanced)** — 25 harder questions (added 2026-06-01): scenario-based, exact-rule
+  traps, and less-common topics (תקנת השוק ס'10, עסקאות נוגדות ס'9, חישוב ליניארי מוטב, היטל השבחה,
+  הפקעה, דייר ממשיך, מימוש משכנתא). Correct answers spread evenly A–D (6/6/7/6) so position-guessing fails.
+More sets / a rotating bank can follow.
 
 ## Where it lives
 - **Folder:** `~/Desktop/broker-exam/` (its own git repo; intentionally on Desktop, not in `~/projects/`).
@@ -20,7 +26,11 @@ Edit `index.html` → commit → `git push origin main` → Pages auto-rebuilds 
 (Open in Safari/Chrome, not a messaging-app in-app preview, so the JS runs.)
 
 ## Build pattern (single self-contained `index.html`, no dependencies, works offline)
-- Data model: `Q = [{a:<correctIndex>, he:{q,o[],e}, ru:{q,o[],e}}]`; `UI = {he,ru}` holds every interface string.
+- Data model: `TESTS = [{name:{he,ru}, Q:[{a:<correctIndex>, he:{q,o[],e}, ru:{q,o[],e}}]}]`.
+  `testIndex` selects the active set; `let Q = TESTS[testIndex].Q` is reassigned on switch. `UI = {he,ru}` holds every interface string.
+- **Test picker** (`.tests` / `.testbtn`, built by `renderTests()`): one button per set, localized via `name[lang]`.
+  `switchTest(i)` swaps `Q`, resets answers + timer, re-renders, scrolls to top.
+- Counts are **derived, not hardcoded**: `passMark() = ceil(Q.length*0.6)`; `UI.count(n)` / `UI.pass(p,n)` / `UI.subFail(pct,p)` are functions. Adding a set of any length Just Works.
 - **Bilingual 🌐 button, fixed top-right** (`.langbtn`): shows the *other* language; one press flips
   questions, options, explanations, UI, and result, and sets `document.documentElement.dir`
   (he = rtl, ru = ltr). Answer letters localize: HE `א–ד`, RU `А–Г`.
@@ -41,5 +51,6 @@ Edit `index.html` → commit → `git push origin main` → Pages auto-rebuilds 
   (valid license + written order + effective cause / גורם יעיל); חוק המקרקעין ס'7 (deal completes on registration) + ס'8 (writing requirement).
 
 ## To add a new test set
-Duplicate the `Q` array structure with fresh questions (keep HE+RU + correct index), or build a
-question bank and have "new test" randomly draw 25. Then commit + push — same live URL.
+Append an object to `TESTS`: `{name:{he:'…', ru:'…'}, Q:[ …questions… ]}` (same `{a, he:{q,o,e}, ru:{q,o,e}}`
+shape). The picker button, scoring, and pass-mark all derive automatically — no other code changes.
+Then commit + push — same live URL. (Or build a bank and draw N at random for "new test".)
